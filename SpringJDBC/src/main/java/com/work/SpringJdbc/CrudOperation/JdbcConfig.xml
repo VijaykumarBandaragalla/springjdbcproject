@@ -30,7 +30,9 @@
 	</bean>
 	
 	<!-- <bean class="com.work.SpringJdbc.CrudOperation.Student" name="student1" p:usn="63278 " p:name="vijay" p:city="blr"></bean> -->
-
+	<bean class="com.work.SpringJdbc.dao.StudentDaoImpl" name="studentdaoimpl" >
+	  <property name="jdbctempl" ref="jdbcTemplate"></property>
+	</bean>
 
 
 
