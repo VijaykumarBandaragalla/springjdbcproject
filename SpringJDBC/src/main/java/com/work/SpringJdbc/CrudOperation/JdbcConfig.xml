@@ -33,7 +33,9 @@
 	<bean class="com.work.SpringJdbc.dao.StudentDaoImpl" name="studentdaoimpl" >
 	  <property name="jdbctempl" ref="jdbcTemplate"></property>
 	</bean>
-
+	
+	
+	<bean class="com.work.SpringJdbc.Entity.Student" name="s" p:usn="sfvb" p:name="sumalatha" p:city="uk"></bean>
 
 
 

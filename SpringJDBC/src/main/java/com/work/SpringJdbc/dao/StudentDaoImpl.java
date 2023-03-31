@@ -7,11 +7,11 @@ import com.work.SpringJdbc.Entity.Student;
 public class StudentDaoImpl implements StudentDao{
 
 	private JdbcTemplate jdbctempl;
+	
 	public int insert(Student student) {
 		String inquery="insert into jdbcspring.student value(?,?,?)";
 		int result=jdbctempl.update(inquery,student.getUsn() ,student.getName() ,student.getCity() );
 		System.out.println("record inserted "+ result);
-		
 		return result;
 	}
 	public JdbcTemplate getJdbctempl() {

@@ -30,13 +30,17 @@ public class App
         	
         
         	StudentDao s=con.getBean("studentdaoimpl",StudentDaoImpl.class);
-        	Student a = new Student();
+//        	
+//        	Student a = new Student();
+//        	a.setUsn("2");
+//        	a.setName("ravi");
+//        	a.setCity("blr");
+//        	int result=s.insert(a);
+//        	System.out.println(result);
         	
-        	a.setUsn("2");
-        	a.setName("ravi");
-        	a.setCity("blr");
-        	int result=s.insert(a);
-        	System.out.println(result);
+        	//if i want to get the bean of student
+        	Student b=con.getBean("s",Student.class);
+        	s.insert(b);
         System.out.println( "Application Excecution Ended" );
     }
 }
