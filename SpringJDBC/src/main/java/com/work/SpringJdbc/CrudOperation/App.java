@@ -39,8 +39,12 @@ public class App
 //        	System.out.println(result);
         	
         	//if i want to get the bean of student
-        	Student b=con.getBean("s",Student.class);
-        	s.insert(b);
+//        	Student b=con.getBean("s",Student.class);
+//        	s.insert(b);
+        	
+        	Student p=s.getStudent("2kdaiqw");
+        	System.out.println(p);
+        	
         System.out.println( "Application Excecution Ended" );
     }
 }
