@@ -3,6 +3,7 @@ package com.work.SpringJdbc.CrudOperation;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -15,7 +16,8 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Application Excecution Started" );
-        ApplicationContext con = new ClassPathXmlApplicationContext("com/work/SpringJdbc/CrudOperation/JdbcConfig.xml");
+//        ApplicationContext con = new ClassPathXmlApplicationContext("com/work/SpringJdbc/CrudOperation/JdbcConfig.xml");
+        ApplicationContext con = new AnnotationConfigApplicationContext(JavaConfig.class);
 //        Student s=con.getBean("student1",Student.class);
 //        System.out.println(s);
 //          JdbcTemplate a=  con.getBean("jdbcTemplate",JdbcTemplate.class);
@@ -31,7 +33,8 @@ public class App
 //          System.out.println("record deleted "+b);
         	
         
-        	StudentDao s=con.getBean("studentdaoimpl",StudentDaoImpl.class);
+//        	StudentDao s=con.getBean("studentdaoimpl",StudentDaoImpl.class);
+        	StudentDao s=con.getBean("StudentDaoImpl",StudentDaoImpl.class);
 //        	
 //        	Student a = new Student();
 //        	a.setUsn("2");
