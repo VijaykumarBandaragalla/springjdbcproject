@@ -1,5 +1,7 @@
 package com.work.SpringJdbc.CrudOperation;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -42,8 +44,16 @@ public class App
 //        	Student b=con.getBean("s",Student.class);
 //        	s.insert(b);
         	
-        	Student p=s.getStudent("2kdaiqw");
-        	System.out.println(p);
+        	
+        	//specific student details
+//        	Student p=s.getStudent("2kdaiqw");
+//        	System.out.println(p);
+        	
+        	//to fetch multiple student details
+        	List<Student> stud=s.getStudent();
+        	for(Student a: stud) {
+        		System.out.println(a);
+        	}
         	
         System.out.println( "Application Excecution Ended" );
     }
