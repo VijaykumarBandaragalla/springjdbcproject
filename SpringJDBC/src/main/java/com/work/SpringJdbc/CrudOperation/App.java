@@ -26,7 +26,7 @@ public class App
 //          String query="insert into jdbcspring.student value(?,?,?)";
 //          int b=a.update(query,"dkjh12","akshay","manglore");
 //          System.out.println("record inserted"+b);
-          
+           
 //          deleting query
 //          String query ="delete from jdbcspring.student";
 //          int b=a.update(query);
